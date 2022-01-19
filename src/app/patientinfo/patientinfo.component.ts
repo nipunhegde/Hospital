@@ -25,18 +25,5 @@ export class PatientinfoComponent implements OnInit {
     });
   }
 
-  patientDetails(id: number){
-    this.router.navigate(['patient-details', id]);
-  }
-
-  updatePatient(id: number){
-    this.router.navigate(['update-patient', id]);
-  }
-
-  deletePatient(id: number){
-    this.patientregistrationservice.deletePatient(id).subscribe( data => {
-      console.log(data);
-      this.getPatients();
-    })
-  }
+ 
 }
